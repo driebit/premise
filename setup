@@ -1,0 +1,18 @@
+#!/bin/bash
+
+VAGRANT_VERSION=1.6.3
+VIRTUALBOX_VERSION=4.3.14
+VIRTUALBOX_FULL_VERSION=4.3.14-95030
+
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" > /dev/null
+
+brew install ansible
+
+cd /tmp
+wget -Nq https://dl.bintray.com/mitchellh/vagrant/vagrant_$VAGRANT_VERSION.dmg
+#hdiutil attach ./vagrant_$VAGRANT_VERSION.dmg
+#sudo installer -package /Volumes/Vagrant/Vagrant.pkg -target "/Volumes/Macintosh HD"
+
+wget -Nq http://download.virtualbox.org/virtualbox/$VIRTUALBOX_VERSION/VirtualBox-$VIRTUALBOX_FULL_VERSION-OSX.dmg
+hdiutil attach ./VirtualBox-$VIRTUALBOX_FULL_VERSION-OSX.dmg
+sudo installer -package /Volumes/VirtualBox/VirtualBox.pkg -target "/Volumes/Macintosh HD"
