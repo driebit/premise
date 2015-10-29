@@ -1,8 +1,8 @@
 #!/bin/bash
 
-VAGRANT_VERSION=1.6.3
-VIRTUALBOX_VERSION=4.3.14
-VIRTUALBOX_FULL_VERSION=4.3.14-95030
+VAGRANT_VERSION=1.7.4
+VIRTUALBOX_VERSION=5.0.8
+VIRTUALBOX_FULL_VERSION=5.0.8-103449
 
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" > /dev/null
 
