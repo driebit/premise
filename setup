@@ -15,4 +15,4 @@ sudo installer -package /Volumes/Vagrant/Vagrant.pkg -target /
 
 wget -Nq http://download.virtualbox.org/virtualbox/$VIRTUALBOX_VERSION/VirtualBox-$VIRTUALBOX_FULL_VERSION-OSX.dmg
 hdiutil attach ./VirtualBox-$VIRTUALBOX_FULL_VERSION-OSX.dmg
-sudo installer -package /Volumes/VirtualBox/VirtualBox.pkg /
+sudo installer -package /Volumes/VirtualBox/VirtualBox.pkg -target /
