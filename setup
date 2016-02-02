@@ -9,7 +9,8 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install ansible wget
 
 cd /tmp
-wget -Nq https://dl.bintray.com/mitchellh/vagrant/vagrant_$VAGRANT_VERSION.dmg
+wget -Nq https://releases.hashicorp.com/vagrant/$VAGRANT_VERSION/vagrant_$VAGRANT_VERSION.dmg
+
 hdiutil attach ./vagrant_$VAGRANT_VERSION.dmg
 sudo installer -package /Volumes/Vagrant/Vagrant.pkg -target /
 
