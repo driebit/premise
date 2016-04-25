@@ -7,4 +7,6 @@ Install Vagrant, VirtualBox and Ansible on your OS X development box:
 $ curl https://raw.githubusercontent.com/driebit/premise/master/setup | bash
 ```
 
-Warning: do not run as `sudo`!
+You may then have to enter your OS X admin password. 
+
+Warning: do not run the `curl` command as `sudo`!

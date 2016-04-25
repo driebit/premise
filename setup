@@ -1,19 +1,19 @@
 #!/bin/bash
 
 VAGRANT_VERSION=1.8.1
-VIRTUALBOX_VERSION=5.0.8
-VIRTUALBOX_FULL_VERSION=5.0.8-103449
+VIRTUALBOX_VERSION=5.0.18
+VIRTUALBOX_FULL_VERSION=5.0.18-106667
 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-brew install ansible wget
+brew install ansible wget docker docker-compose docker-machine
 
 cd /tmp
-wget -Nq https://releases.hashicorp.com/vagrant/$VAGRANT_VERSION/vagrant_$VAGRANT_VERSION.dmg
+wget -N https://releases.hashicorp.com/vagrant/$VAGRANT_VERSION/vagrant_$VAGRANT_VERSION.dmg
 
 hdiutil attach ./vagrant_$VAGRANT_VERSION.dmg
 sudo installer -package /Volumes/Vagrant/Vagrant.pkg -target /
 
-wget -Nq http://download.virtualbox.org/virtualbox/$VIRTUALBOX_VERSION/VirtualBox-$VIRTUALBOX_FULL_VERSION-OSX.dmg
+wget -N http://download.virtualbox.org/virtualbox/$VIRTUALBOX_VERSION/VirtualBox-$VIRTUALBOX_FULL_VERSION-OSX.dmg
 hdiutil attach ./VirtualBox-$VIRTUALBOX_FULL_VERSION-OSX.dmg
 sudo installer -package /Volumes/VirtualBox/VirtualBox.pkg -target /
